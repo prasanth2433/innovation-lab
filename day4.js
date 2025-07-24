@@ -65,3 +65,4 @@
 const person=["john",20,"softwaredeveloper"];
 const[name,age,desigination]=person;
 console.log(name+" "+age+" "+desigination+" ");
+
