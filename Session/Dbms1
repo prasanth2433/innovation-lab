@@ -1,0 +1,17 @@
+create table inventory(prono number primary key, 
+2 pronamevarchar(20), 
+3 rate number);
+
+insert into inventory values(&prono,'&proname',&rate);
+begin
+update inventory set rate=rate+(rate*20/100); 
+commit; 
+end;
+/
+alter table inventory add no_of_items number;
+update inventory set no_of_items=case prono
+ when 1001 then 10 
+ when 1002 then 8 
+ when 1003 then 6 
+ when 1004 then 4 
+end; 
